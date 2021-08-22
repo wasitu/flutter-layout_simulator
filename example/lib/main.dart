@@ -1,14 +1,6 @@
-# LayoutSimulator
-
-This package is inspired by [DeviceSimulator](https://pub.dev/packages/device_simulator).  
-LayoutSimulator can simulate app layout with any screen size, orientation and text scale.
-
-<img src="sample.gif" width="320"/>
-
-## Getting Started
-```
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:layout_simulator_example/first_page.dart';
 
 import 'package:layout_simulator/layout_simulator.dart';
 
@@ -26,12 +18,23 @@ class _MyAppState extends State<MyApp> {
   bool isEnabled = true;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: _themeMode,
-      home: FirstPage(),
+      home: FirstPage(
+        onToggle: () {
+          setState(() {
+            isEnabled = !isEnabled;
+          });
+        },
+      ),
       builder: (context, child) {
         if (kDebugMode) {
           return LayoutSimulator(
@@ -50,4 +53,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-```
