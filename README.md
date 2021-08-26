@@ -3,7 +3,7 @@
 This package is inspired by [DeviceSimulator](https://pub.dev/packages/device_simulator).  
 LayoutSimulator can simulate app layout with any screen size, orientation and text scale.
 
-<img src="sample.gif" width="480"/>
+![](https://github.com/wasitu/flutter-layout_simulator/blob/main/sample.gif?raw=true)
 
 ## Getting Started
 ```dart
