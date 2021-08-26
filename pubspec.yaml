@@ -1,7 +1,7 @@
 name: layout_simulator
-description: A new flutter plugin project.
+description: LayoutSimulator can simulate app layout with any screen size, orientation and text scale.
 version: 0.1.0
-homepage:
+homepage: https://github.com/wasitu/flutter-layout_simulator
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

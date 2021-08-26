@@ -18,11 +18,6 @@ class _MyAppState extends State<MyApp> {
   bool isEnabled = true;
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
