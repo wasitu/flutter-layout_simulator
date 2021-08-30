@@ -24,7 +24,7 @@ class _DeviceListState extends State<DeviceList> {
 
   final categories = {
     'iPhone & iPad': Icon(
-      IconData(0xe800,
+      const IconData(0xe800,
           fontFamily: 'apple_icon', fontPackage: 'layout_simulator'),
       color: Colors.white,
       size: 20.0,
