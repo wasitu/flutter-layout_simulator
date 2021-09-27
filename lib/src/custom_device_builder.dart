@@ -97,7 +97,7 @@ class _State extends State<CustomDeviceBuilder> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(5),
@@ -108,7 +108,8 @@ class _State extends State<CustomDeviceBuilder> {
                       children: [
                         Flexible(
                           child: TextField(
-                            cursorColor: Theme.of(context).accentColor,
+                            cursorColor:
+                                Theme.of(context).colorScheme.secondary,
                             controller: widthEditController,
                             focusNode: widthFocusNode,
                             style: TextStyle().copyWith(color: Colors.white),
@@ -118,7 +119,7 @@ class _State extends State<CustomDeviceBuilder> {
                               labelText: 'width:',
                               labelStyle: TextStyle().copyWith(
                                 color: widthFocusNode.hasFocus
-                                    ? Theme.of(context).accentColor
+                                    ? Theme.of(context).colorScheme.secondary
                                     : Colors.white,
                               ),
                             ),
@@ -135,7 +136,8 @@ class _State extends State<CustomDeviceBuilder> {
                         SizedBox(width: 24),
                         Flexible(
                           child: TextField(
-                            cursorColor: Theme.of(context).accentColor,
+                            cursorColor:
+                                Theme.of(context).colorScheme.secondary,
                             controller: heightEditController,
                             focusNode: heightFocusNode,
                             style: TextStyle().copyWith(color: Colors.white),
@@ -145,7 +147,7 @@ class _State extends State<CustomDeviceBuilder> {
                               labelText: 'height:',
                               labelStyle: TextStyle().copyWith(
                                 color: heightFocusNode.hasFocus
-                                    ? Theme.of(context).accentColor
+                                    ? Theme.of(context).colorScheme.secondary
                                     : Colors.white,
                               ),
                             ),
@@ -170,14 +172,14 @@ class _State extends State<CustomDeviceBuilder> {
                         width: double.infinity,
                         child: TextButton(
                           onPressed: () {
-                            (onSelect ?? () {})(DeviceSpecification(
+                            (onSelect ?? (_) {})(DeviceSpecification(
                               name: 'custom',
                               size: Size(_width, _height),
                             ));
                           },
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.white,
-                            primary: Theme.of(context).accentColor,
+                            primary: Theme.of(context).colorScheme.secondary,
                           ),
                           child: Text(
                             'BUILD',

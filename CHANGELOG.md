@@ -1,3 +1,6 @@
+## 0.1.2
+- Fix Unhandled exception on flutter.gradle.
+
 ## 0.1.1
 - Fix release build error.  
 
