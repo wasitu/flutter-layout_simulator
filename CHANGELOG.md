@@ -1,3 +1,6 @@
+## 0.2.0
+- Compatible with flutter ^3.19.0
+
 ## 0.1.2
 - Fix Unhandled exception on flutter.gradle.
 

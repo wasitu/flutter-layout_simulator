@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'device_specification.dart';
 
@@ -179,7 +178,8 @@ class _State extends State<CustomDeviceBuilder> {
                           },
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.white,
-                            primary: Theme.of(context).colorScheme.secondary,
+                            foregroundColor:
+                                Theme.of(context).colorScheme.secondary,
                           ),
                           child: Text(
                             'BUILD',
