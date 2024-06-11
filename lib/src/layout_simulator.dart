@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:layout_simulator/src/device_list.dart';
 import 'package:layout_simulator/src/device_specification.dart';
@@ -85,7 +84,7 @@ class _LayoutSimulatorState extends State<LayoutSimulator> {
       data: mq.copyWith(
         size: Size(simulatedSize.width, simulatedSize.height - navBarHeight),
         padding: padding,
-        textScaleFactor: _textScale,
+        textScaler: TextScaler.linear(_textScale),
       ),
       child: Theme(
         data: theme.copyWith(
@@ -196,7 +195,8 @@ class _LayoutSimulatorState extends State<LayoutSimulator> {
 
     Widget screen = Material(
       child: MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        data:
+            MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0)),
         child: Stack(
           children: [
             Column(
@@ -416,7 +416,7 @@ class _LayoutSimulatorState extends State<LayoutSimulator> {
                                   'screen: × ${_screenScale.toStringAsFixed(1)}',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .caption
+                                      .bodySmall
                                       ?.copyWith(color: Colors.white),
                                 ),
                               ],
@@ -450,7 +450,7 @@ class _LayoutSimulatorState extends State<LayoutSimulator> {
                                   'text: × ${_textScale.toStringAsFixed(1)}',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .caption
+                                      .bodySmall
                                       ?.copyWith(color: Colors.white),
                                 ),
                               ],

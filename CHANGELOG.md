@@ -1,3 +1,6 @@
+## 0.3.0
+- Compatible with flutter ^3.22.0
+
 ## 0.2.0
 - Compatible with flutter ^3.19.0
 
